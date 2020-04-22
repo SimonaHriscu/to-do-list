@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Indie Flower", cursive;
+}
+
+.content {
+  width: 80vw;
+  height: 80vh;
+  background-image: url(../img/kindpng_1654560.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.content .form {
+  width: 20vw;
+  height: 60vh;
+  position: relative;
+  top: 10vh;
+  left: 35vw;
+}
+.content .form h1 {
+  margin-left: 2.5vw;
+}
+.content .form [type=text] {
+  margin-top: 3vh;
+  margin-left: 2vw;
+  width: 10vw;
+  height: 3vh;
+  border: none;
+  border-bottom: solid 0.5px gray;
+}
+.content .form [type=text]:focus {
+  outline: none;
+}
+.content .form button {
+  width: 4vw;
+  height: 3vh;
+  border: none;
+  background-color: white;
+  font-family: "Indie Flower", cursive;
+  font-weight: bold;
+}
+.content .form button:focus {
+  outline: none;
+}
+.content .form .result {
+  margin-top: 3vh;
+  font-size: 2vw;
+}
+
+/*# sourceMappingURL=main.css.map */
