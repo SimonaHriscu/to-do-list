@@ -34,10 +34,7 @@ Object.assign(span, {
   onclick: function () {
     span.classList.add("invisible");
    // span.style.display = "none";
-    
   }
- 
+
 })
-
-
  };
