@@ -28,13 +28,16 @@ const addList = () => {
     item.appendChild(span);
   });
 
+  // span.addEventListener("click", () => {
+  //   newElem.style.display = "none";
+  // });
 
-  
+
 Object.assign(span, {
   onclick: function () {
-    span.classList.add("invisible");
+    newElem.classList.add("invisible");
    // span.style.display = "none";
   }
-
 })
+
  };
