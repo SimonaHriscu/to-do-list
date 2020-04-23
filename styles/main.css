@@ -57,5 +57,18 @@ body {
   margin-top: 3vh;
   font-size: 2vw;
 }
+.content .form li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.content .form .close {
+  color: black;
+  margin-right: 1vw;
+  display: block;
+}
+.content .form .invisible {
+  display: none;
+}
 
 /*# sourceMappingURL=main.css.map */
