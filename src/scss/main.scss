@@ -22,13 +22,13 @@ body {
   background-size: contain;
 
   .form {
-    width: 20vw;
+    width: 23vw;
     height: 60vh;
     position: relative;
     top: 10vh;
-    left: 35vw;
+    left: 33vw;
     h1 {
-      margin-left: 2.5vw;
+      margin-left: 5.5vw;
     }
 
     [type="text"] {
@@ -56,7 +56,7 @@ body {
 
     .result {
       margin-top: 3vh;
-      font-size: 2vw;
+      font-size: 1.7vw;     
     }
     li {
       display: flex;
@@ -69,7 +69,7 @@ body {
       color: black;
       margin-right: 1vw;
       position: absolute;
-      left: 15vw;
+      left: 19.5vw;
     }
 
     .close {
