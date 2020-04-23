@@ -19,25 +19,37 @@ const addList = () => {
   document.querySelector("#userText").value = "";
   let items = document.querySelectorAll("li");
 
-  let span = document.createElement("span");
-  let closeButton = document.createTextNode("X");
-  span.className = "close";
-  span.appendChild(closeButton);
+  let span1 = document.createElement("span");
+  let closeButton = document.createTextNode("✗");
+  span1.className = "close";
+  span1.appendChild(closeButton);
   items.forEach((item) => {
     item.style.color = colorGen();
-    item.appendChild(span);
   });
 
-  // span.addEventListener("click", () => {
-  //   newElem.style.display = "none";
-  // });
+  let span2 = document.createElement("span");
+  let checkButton = document.createTextNode("✓");
+  span2.className = "check";
+  span2.appendChild(checkButton);
+  items.forEach((item) => {
+    item.appendChild(span1);
+    item.appendChild(span2);
+  });
 
+  Object.assign(span1, {
+    onclick: function () {
+      newElem.classList.add("invisible");
+      // span1.style.display = "none";
+    },
+  });
+  span2.addEventListener("click", () => {
+    newElem.classList.toggle("solved");
+  });
 
-Object.assign(span, {
-  onclick: function () {
-    newElem.classList.add("invisible");
-   // span.style.display = "none";
-  }
-})
-
- };
+  // Object.assign(span2, {
+  //   onclick: function () {
+  //     newElem.classList.toggle("solved");
+  //    // span1.style.display = "none";
+  //   }
+  // })
+};
