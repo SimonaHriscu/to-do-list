@@ -12,6 +12,8 @@ const addList = () => {
   if (userInput == "") {
     return alert("You cannot have an empty task");
   }
+  
+  
   let newElem = document.createElement("li");
   let textLine = document.createTextNode(userInput);
   newElem.appendChild(textLine);
@@ -23,15 +25,14 @@ const addList = () => {
   let closeButton = document.createTextNode("✗");
   span1.className = "close";
   span1.appendChild(closeButton);
-  items.forEach((item) => {
-    item.style.color = colorGen();
-  });
+  
 
   let span2 = document.createElement("span");
   let checkButton = document.createTextNode("✓");
   span2.className = "check";
   span2.appendChild(checkButton);
   items.forEach((item) => {
+    item.style.color = colorGen();
     item.appendChild(span1);
     item.appendChild(span2);
   });
@@ -53,3 +54,8 @@ const addList = () => {
   //   }
   // })
 };
+function keyPressFunction(event){
+  if(event.key == "Enter") addList();
+}
+let userInputKey = document.querySelector("#userText");
+userInputKey.addEventListener("keypress", keyPressFunction)

@@ -56,13 +56,17 @@ body {
 
     .result {
       margin-top: 3vh;
-      font-size: 1.7vw;     
+      font-size: 1.7vw; 
+         
     }
+    
     li {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+     // display: list-item;
       cursor: pointer;
+     
     }
 
     .check {
