@@ -7,55 +7,55 @@ const colorGen = () => {
   return result;
 };
 
-const addList = () => {
-  let userInput = document.querySelector("#userText").value;
-  if (userInput == "") {
-    return alert("You cannot have an empty task");
-  }
-  
-  
-  let newElem = document.createElement("li");
-  let textLine = document.createTextNode(userInput);
-  newElem.appendChild(textLine);
-  document.querySelector(".result").appendChild(newElem);
+
+const userList = document.querySelector("ol");
+const listInput = document.querySelector("#userText");
+const addListButton = document.querySelector("button")
+
+
+const addList =() => {
+ // create DIV
+ const toDoDiv = document.createElement("div");
+ toDoDiv.classList.add("todo");
+  const newLi = document.createElement("li");
+  const liContent = document.createTextNode(listInput.value);
+  newLi.appendChild(liContent); // the value i append to LI
+  toDoDiv.appendChild(newLi);//LI i append to DIV
+  userList.appendChild(toDoDiv);//DIV i append to OL
   document.querySelector("#userText").value = "";
-  let items = document.querySelectorAll("li");
 
-  let span1 = document.createElement("span");
-  let closeButton = document.createTextNode("✗");
-  span1.className = "close";
-  span1.appendChild(closeButton);
-  
-
-  let span2 = document.createElement("span");
-  let checkButton = document.createTextNode("✓");
-  span2.className = "check";
-  span2.appendChild(checkButton);
+  const items = document.querySelectorAll("li");
   items.forEach((item) => {
     item.style.color = colorGen();
-    item.appendChild(span1);
-    item.appendChild(span2);
   });
 
-  Object.assign(span1, {
-    onclick: function () {
-      newElem.classList.add("invisible");
-      // span1.style.display = "none";
-    },
-  });
-  span2.addEventListener("click", () => {
-    newElem.classList.toggle("solved");
-  });
+  //Delete Button + Checked
+  const completedButton = document.createElement('button');
+  completedButton.innerHTML = "✓";
+  completedButton.classList.add("completed-btn");
+  toDoDiv.appendChild(completedButton);// button is appended to the div
 
-  // Object.assign(span2, {
-  //   onclick: function () {
-  //     newElem.classList.toggle("solved");
-  //    // span1.style.display = "none";
-  //   }
-  // })
-};
+  const deleteButton = document.createElement('button');
+  deleteButton.innerHTML = "✗";
+  deleteButton.classList.add("delete-btn");
+  toDoDiv.appendChild(deleteButton);// button is appended to the div
+
+  const checkMe =() =>{
+    newLi.classList.toggle("check");
+  }
+  const deleteMe =() =>{
+    toDoDiv.remove();
+  }
+deleteButton.addEventListener("click", deleteMe);
+completedButton.addEventListener("click", checkMe);
+}
+
 function keyPressFunction(event){
   if(event.key == "Enter") addList();
 }
-let userInputKey = document.querySelector("#userText");
-userInputKey.addEventListener("keypress", keyPressFunction)
+
+addListButton.addEventListener("click", addList);
+let inputKey = document.querySelector("#userText");
+inputKey.addEventListener("keypress", keyPressFunction);
+
+

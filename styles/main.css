@@ -27,7 +27,7 @@ body {
   height: 60vh;
   position: relative;
   top: 10vh;
-  left: 33vw;
+  left: 34vw;
 }
 .content .form h1 {
   margin-left: 5.5vw;
@@ -49,6 +49,7 @@ body {
   border: none;
   background-color: white;
   font-family: "Indie Flower", cursive;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 .content .form button:focus {
@@ -56,28 +57,38 @@ body {
 }
 .content .form .result {
   margin-top: 3vh;
-  font-size: 1.7vw;
+  font-size: 1.5vw;
+  width: 22vw;
+  height: 45vh;
 }
-.content .form li {
+.content .form .result .todo {
+  width: 22vw;
+  height: 5vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  max-width: 22vw;
   cursor: pointer;
 }
-.content .form .check {
-  color: black;
-  margin-right: 1vw;
-  position: absolute;
-  left: 19.5vw;
+.content .form .result .todo .completed-btn {
+  width: 1.5vw;
+  font-size: 2rem;
 }
-.content .form .close {
-  color: black;
+.content .form .result .todo .delete-btn {
+  width: 1.5vw;
+  font-size: 2rem;
 }
-.content .form .invisible {
-  display: none;
-}
-.content .form .solved {
+.content .form .result .todo .check {
   text-decoration: line-through;
+  opacity: 0.4;
+}
+.content .form .result li {
+  width: 22vw;
+  height: 5vh;
+  display: list-item;
+  word-wrap: break-word;
+  max-width: 19vw;
+  overflow-wrap: break-word;
 }
 
 /*# sourceMappingURL=main.css.map */
