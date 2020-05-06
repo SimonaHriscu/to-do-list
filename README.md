@@ -6,4 +6,4 @@
 
 ## Preview:
 
-![Imgur](https://i.imgur.com/NU48WA0.png?1)
+![Imgur](https://i.imgur.com/KAVv4qZ.png?1)
