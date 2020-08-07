@@ -20,6 +20,8 @@
 ![Imgur](https://i.imgur.com/KAVv4qZ.png?1)
 
 
+## Structure:
+
 ```
 Project
 │   README.md
